@@ -1,0 +1,19 @@
+{
+  "exp_name": "test1",
+  "num_epochs": 20,
+  "learning_rate": 0.00064,
+  "batch_size": 5,
+  "max_to_keep":1,
+  "dataset_name": "PROTEINS",
+  "num_fold": null,
+  "num_exp": 0,
+  "gpu": "0",
+  "momentum": 0.9,
+  "optimizer": "adam",
+  "decay_rate": 0.6,
+  "is_decay": true,
+  "architecture": [32, 32, 64],
+  "save_rate": 50,
+  "val_exist": true
+
+  }

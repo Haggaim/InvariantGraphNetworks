@@ -1,0 +1,14 @@
+{
+
+  "dataset_name": "PROTEINS",
+  "max_to_keep":1,
+  "save_rate": 50,
+  "gpu": "0",
+  "num_exp": 1,
+  "exp_name": "10fold_cross_validation",
+  "batch_size": 5,
+  "optimizer": "adam",
+  "is_decay": true,
+  "architecture": [16, 32, 256],
+  "val_exist": false
+  }
