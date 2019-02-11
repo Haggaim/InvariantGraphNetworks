@@ -1,5 +1,6 @@
 # Invariant and  Equivariant Graph Networks
-
+A TensorFlow implementation of The ICLR 2019 paper "Invariant and  Equivariant Graph Networks" by Haggai Maron, Heli Ben-Hamu, Nadav Shamir and Yaron Lipman
+https://openreview.net/forum?id=Syx72jC9tm
 ## Abstract
 Invariant and equivariant networks have been successfully used for learning images, sets, point clouds, and graphs. A basic challenge in developing such networks is finding the maximal collection of invariant and equivariant \emph{linear} layers. Although this question is answered for the first three examples (for popular transformations, at-least), a full characterization of invariant and equivariant linear layers for graphs is not known.
 In this paper we provide a characterization of all permutation invariant and equivariant linear layers for (hyper-)graph data, and show that their dimension, in case of edge-value graph data, is $2$ and $15$, respectively. More generally, for graph data defined on $k$-tuples of nodes, the dimension is the $k$-th and $2k$-th Bell numbers. Orthogonal bases for the layers are computed, including generalization to multi-graph data. The constant number of basis elements and their characteristics allow successfully applying the networks to different size graphs. From the theoretical point of view, our results generalize and unify recent advancement in equivariant deep learning. In particular, we show that our model is capable of approximating any message passing neural network.
@@ -14,8 +15,7 @@ unzip benchmark_graphs.zip -d data
 ```
 
 ## Code
-A TensorFlow implementation of The ICLR 2019 paper "Invariant and  Equivariant Graph Networks" by Haggai Maron, Heli Ben-Hamu, Nadav Shamir and Yaron Lipman
-https://openreview.net/forum?id=Syx72jC9tm
+
 ### Prerequisites
 
 python3
