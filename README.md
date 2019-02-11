@@ -5,6 +5,14 @@ Invariant and equivariant networks have been successfully used for learning imag
 In this paper we provide a characterization of all permutation invariant and equivariant linear layers for (hyper-)graph data, and show that their dimension, in case of edge-value graph data, is $2$ and $15$, respectively. More generally, for graph data defined on $k$-tuples of nodes, the dimension is the $k$-th and $2k$-th Bell numbers. Orthogonal bases for the layers are computed, including generalization to multi-graph data. The constant number of basis elements and their characteristics allow successfully applying the networks to different size graphs. From the theoretical point of view, our results generalize and unify recent advancement in equivariant deep learning. In particular, we show that our model is capable of approximating any message passing neural network.
 Applying these new linear layers in a simple deep neural network framework is shown to achieve comparable results to state-of-the-art and to have better expressivity than previous invariant and equivariant bases.
 
+## Data
+Data should be downloaded from: https://www.dropbox.com/s/vjd6wy5nemg2gh6/benchmark_graphs.zip?dl=0
+run: the following commands in order to unzip the data and put its proper path.
+```
+mkdir data
+unzip benchmark_graphs.zip -d data
+```
+
 ## Code
 A TensorFlow implementation of The ICLR 2019 paper "Invariant and  Equivariant Graph Networks" by Haggai Maron, Heli Ben-Hamu, Nadav Shamir and Yaron Lipman
 https://openreview.net/forum?id=Syx72jC9tm
