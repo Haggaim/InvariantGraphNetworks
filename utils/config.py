@@ -38,6 +38,9 @@ def process_config(json_file):
         config.num_epochs = CHOSEN_EPOCH[config.dataset_name]
         config.learning_rate = LEARNING_RATES[config.dataset_name]
         config.decay_rate = DECAY_RATES[config.dataset_name]
+    config.n_gpus = len(config.gpu.split(‘,’))
+    config.gpus_list = “,”.join([‘{}‘.format(i) for i in range(config.n_gpus)])
+    config.devices = [‘/gpu:{}’.format(i) for i in range(config.n_gpus)]    
     return config
 
 if __name__ == '__main__':
