@@ -8,7 +8,7 @@ Applying these new linear layers in a simple deep neural network framework is sh
 
 ## Data
 Data should be downloaded from: https://www.dropbox.com/s/vjd6wy5nemg2gh6/benchmark_graphs.zip?dl=0
-run: the following commands in order to unzip the data and put its proper path.
+Run the following commands in order to unzip the data and put its proper path.
 ```
 mkdir data
 unzip benchmark_graphs.zip -d data
