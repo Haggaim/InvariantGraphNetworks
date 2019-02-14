@@ -19,7 +19,7 @@ def main():
         print("missing or invalid arguments %s" % e)
         exit(0)
 
-    os.environ["CUDA_VISIBLE_devices"] = config.gpu
+    os.environ["CUDA_VISIBLE_DEVICES"] = config.gpu
     import tensorflow as tf
     import numpy as np
     tf.set_random_seed(100)
@@ -36,7 +36,8 @@ def main():
             config.num_fold = fold
             data = DataGenerator(config)
             gpuconfig = tf.ConfigProto(allow_soft_placement=True, log_device_placement=False)
-            gpuconfig.gpu_options.visible_device_list = config.gpu
+            gpuconfig.gpu_options.visible_device_list = config.gpus_list
+            gpuconfig.gpu_options.allow_growth = True
             sess = tf.Session(config=gpuconfig)
             # create an instance of the model you want
             model = invariant_basic(config, data)
