@@ -19,14 +19,15 @@ def main():
         print("missing or invalid arguments %s" % e)
         exit(0)
 
-    os.environ["CUDA_VISIBLE_devices"] = config.gpu
+    os.environ["CUDA_VISIBLE_DEVICES"] = config.gpu
     import tensorflow as tf
 
     # create the experiments dirs
     create_dirs([config.summary_dir, config.checkpoint_dir])
     # create tensorflow session
     gpuconfig = tf.ConfigProto(allow_soft_placement=True, log_device_placement=False)
-    gpuconfig.gpu_options.visible_device_list = config.gpu
+    gpuconfig.gpu_options.visible_device_list = config.gpus_list
+    gpuconfig.gpu_options.allow_growth = True
     sess = tf.Session(config=gpuconfig)
     # create your data generator
     data = DataGenerator(config)
