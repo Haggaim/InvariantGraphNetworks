@@ -34,10 +34,10 @@ The folder main_scripts contains scripts that run different experiments:
 2. To run hyper-parameter search, run the main_parameter_search.py script  with the corresponding config file
 3. To run training and evaluation on one of the data sets run the main.py script
 
-example to run 10fold experiment experiment:
+example to run 10-fold cross-validation experiment:
 
 ```
-python3 -m mains.main_10fold_experiment --config=configs/10fold_config.json
+python3 -m main_10fold_experiment --config=configs/10fold_config.json
 ```
 
 
